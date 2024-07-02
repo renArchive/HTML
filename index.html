@@ -1,0 +1,174 @@
+<!DOCTYPE html> <!-- NODO: Define la version de html a usar (la más reciente)-->
+<html>
+    <head>
+        <meta charset="utf-8"> <!-- Define la codificacion a usar -->
+        <meta name="viewport" content="width=device-width"> <!-- Sitio adaptable, el ancho del conenido será el ancho de la pantalla -->
+        <title>My Site</title><!-- Titulo del documento, importante para SEO -->
+    </head>
+    <body>
+        <header>
+            <h1>Portfolio de Andrea Aguilar</h1>
+            <nav>
+                <!--Enlaces internos-->
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="https://www.youtube.com/watch?v=0IYvrTl9ZBc" target="_blank" rel="noreferrer">Band</a>
+            </nav>
+        </header>
+
+        <dialog id="modal">
+            <h3>Modal Here</h3>
+            <p>Some description.</p>
+            <button id="close_modal">Close</button>
+        </dialog>
+        <button id="open_modal">More Info</button>
+        <script>
+            window.open_modal.addEventListener('click', () => {
+                window.modal.showModal()
+            })
+            window.close_modal.addEventListener('click', () => {
+                window.modal.close()
+            })
+        </script>
+
+        <main>
+            <p>+5 years of expirience as a <strong>Software Developer</strong>.</p>
+            <h2 id="expirience">Expirience</h2>
+            <ul>
+                <li>improving 2020 - 2024</li>
+                <li>iTexico 2019 - 2020</li>
+            </ul>
+
+            <!--download funciona solo con recursos disponibles en el proyecto-->
+            <a download href="./sheep.gif">
+                <img 
+                    width="300"
+                    alt="Ren smiling to the camera"
+                    src="./sheep.gif"
+                >
+            </a>
+    
+            <h2 id="projects">Projects</h2>
+            <aside>
+                <header>
+                    <h3>Favorite Technologies</h3>
+                    <ol type="1" reversed start="10">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Node.js</li>
+                    </ol>
+                </header>
+            </aside>
+    
+            <section>
+                <article>
+                    <header>
+                        <h4>Coorporate Web Site</h4>
+                    </header>
+                    <p>Web site development</p>
+                    <footer>
+                        <small>Techlogies used: HTML, CSS, JS</small>
+                    </footer>
+                </article>
+            </section>
+
+            <section>
+                <h2>FAQ</h2>
+                <details open>
+                    <summary>Do you have a degree?</summary>
+                    <p>I have a Systems Ingeneer degree from the UPA.</p>
+                </details>
+                <details>
+                    <summary>Do you have any hobbie?</summary>
+                    <p>Yes, I like to draw, paint, meditate, walking and do exercise.</p>
+                </details>
+            </section>
+
+            <section>
+                <h2>Contact Form</h2>
+
+                <form method="post" action="/">
+                    <fieldset>
+                        <legend>Personal Info</legend>
+                        <div>
+                            <label>Name:
+                                <input 
+                                    type="text"
+                                    name="name"
+                                    placeholder="Jane Doe"
+                                    required
+                                >
+                            </label>
+                        </div>
+                        <div>
+                            <label>Email:
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="janedoe@email.com"
+                                    required
+                                >
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Additional Info</legend>
+                        <div>
+                            <label>Phone:
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder="+524498765723"
+                                    pattern="[0-9]{9}"
+                                    required
+                                >
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Other</legend>
+                        <div>
+                            <label for="why">Why?</label>
+                            <select name="why" id="why">
+                                <option value="1">Work</option>
+                                <option value="2">Question</option>
+                                <option value="3">More Info</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="terms">Do you accept the terms and conditions?</label>
+                            <input type="checkbox" id="terms" name="terms" required>
+                        </div>
+
+                        <div>
+                            <datalist id="languages">
+                                <option value="Javascript"></option>
+                                <option value="Go"></option>
+                                <option value="Python"></option>
+                            </datalist>
+                            <label>
+                                What language would you like me to use?
+                                <input list="languages" name="languages">
+                            </label>
+                            
+                        </div>
+                    </fieldset>
+                    <button>Send Info</button>
+                    <!-- <input type="submit" value="Send Info"> -->
+                </form>
+            </section>
+        </main>
+
+        <footer>
+           Copyright 2024
+           <a href="mailto:janedoe@gmail.com">Send me an email</a>
+           <a href="tel:+524492356789">Call me</a>
+        </footer>
+
+    </body>
+</html>
+
